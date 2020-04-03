@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: openjdk:11
+    steps:
+      - checkout
+      - run:
+          name: Build and Test
+          command: ./mvnw clean verify
